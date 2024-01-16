@@ -1,12 +1,16 @@
-print(6/3) # 나눗셈
-print(5%3) # 나머지 구하기
-print(10//3) # 몫 구하기
-print(3 + 4 == 7) # 등호 표시
-
-print(1 != 3) # 같지 않음을 나타냄
-
-print((3 > 0) and (3 < 5)) # 둘 다 만족해야 함
-print((3 > 0) & (3 < 5))
-
-print((3 > 0) or (3 < 5)) # 하나만 만족해도 됨
-print((3 > 0) | (3 < 5))
+print(2 + 3 * 4)
+print((2 + 3) * 4)
+number = 2 + 3 * 4
+print(number)
+number = number + 2
+print(number)
+number += 2 # number = number + 2 와 같은 뜻
+print(number)
+number *= 2
+print(number)
+number /= 2
+print(number)
+number -= 2
+print(number)
+number %= 5
+print(number)
