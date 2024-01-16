@@ -1,18 +1,22 @@
-python = "Python is Amazing"
-print(python.lower()) # 소문자로
-print(python.upper()) # 대문자로
-print(python[0].isupper()) # 0번쨰 자리 대문자 맞냐?
-print(len(python)) # 길이
-print(python.replace("Python", "Java")) # 대체
+print("a" + "b")
+print("a", "b")
 
-index = python.index("n") # n이 몇번째 자리에 있느냐
-print(index)
-index = python.index("n", index + 1) # index에서 찾은자리 + 1 자리부터 시작
-print(index)
+# 방법 1
+print("나는 %d살입니다." % 20) # % 뒤에있는 값이 %d 자리에 들어감. 다만 d는 정수를 나타내므로 정수만
+print("나는 %s을 좋아해요." % "파이썬") # s는 문자열을 나타냄
+print("Apple은 %c로 시작해요." % "A") # c는 character로 한 글자만 받겠음을 나타냄
+print("나는 %s살입니다." % 20) # s는 기능이 아니라 그냥 문자를 그대로 갖다넣는 느낌
+print("나는 %s색과 %s색을 좋아해요." % ("빨간", "파란"))
 
-print(python.find("n")) # n이 몇번째 자리에 있느냐
-print(python.find("Java")) # find는 내가 원하는 값이 없을 떄 -1을 반환
-print(python.index("Java")) # index는 내가 원하는 값이 없을 떄 error 발생, 뒤에 것 진행 못함
-print("hi")
+# 방법 2
+print("나는 {}살입니다.".format(20))
+print("나는 {}색과 {}색을 좋아해요.".format("빨간", "파란"))
+print("나는 {0}색과 {2}색을 좋아해요.".format("빨간", "파란", "초록"))
 
-print(python.count("n")) # n이 몇 번 등장하느냐
+# 방법 3
+print("나는 {age}살이며, {color}색을 좋아해요.".format(age = 20, color = "빨간"))
+
+# 방법 4
+age = 20
+color = "빨간"
+print(f"나는 {age}살이며, {color}색을 좋아해요.")
