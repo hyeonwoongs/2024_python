@@ -1,22 +1,20 @@
-print("a" + "b")
-print("a", "b")
+# \n : 줄바꿈
+print("백문이 불여일견\n백견이 불여일타")
 
-# 방법 1
-print("나는 %d살입니다." % 20) # % 뒤에있는 값이 %d 자리에 들어감. 다만 d는 정수를 나타내므로 정수만
-print("나는 %s을 좋아해요." % "파이썬") # s는 문자열을 나타냄
-print("Apple은 %c로 시작해요." % "A") # c는 character로 한 글자만 받겠음을 나타냄
-print("나는 %s살입니다." % 20) # s는 기능이 아니라 그냥 문자를 그대로 갖다넣는 느낌
-print("나는 %s색과 %s색을 좋아해요." % ("빨간", "파란"))
+# 저는 "나도코딩"입니다. \", \' : 문장 내에서 따옴표
+print("저는 '나도코딩'입니다.")
+print('저는 "나도코딩"입니다.')
+print("저는 \"나도코딩\"입니다.")
+print("저는 \'나도코딩\'입니다.")
 
-# 방법 2
-print("나는 {}살입니다.".format(20))
-print("나는 {}색과 {}색을 좋아해요.".format("빨간", "파란"))
-print("나는 {0}색과 {2}색을 좋아해요.".format("빨간", "파란", "초록"))
+# \\ : 문장 내에서 \
+print("C:\\2024_python\\python 공부.py")
 
-# 방법 3
-print("나는 {age}살이며, {color}색을 좋아해요.".format(age = 20, color = "빨간"))
+# \r : 커서를 맨 앞으로 이동
+print("Red Apple\rPine") # visual studio 에서는 PineApple로 출력
 
-# 방법 4
-age = 20
-color = "빨간"
-print(f"나는 {age}살이며, {color}색을 좋아해요.")
+# \b : 백스페이스 (한 글자 삭제)
+print("Redd\bApple")
+
+# \t : 탭 (4칸 이동)
+print("Red\tApple") # visual studio 에서는 4칸 이동
