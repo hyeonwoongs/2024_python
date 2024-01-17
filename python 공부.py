@@ -1,39 +1,13 @@
-# cabinet = {3:"유재석", 100:"김태호"}
-# print(cabinet[3])
-# print(cabinet[100])
-#
-# print(cabinet.get(3))
-# print(cabinet[5]) # 프로그램 종료
-# print(cabinet.get(5)) # 뒤 프로그램 실행 가능
-# print(cabinet.get(5, "사용가능"))
-# print("하이")
+menu = ("돈까스", "치즈까스")
+print(menu[0])
+print(menu[1])
 
-# print(3 in cabinet) # True
-# print(5 in cabinet) # False
+# menu.add("생선까스") tuple은 값을 추가할 수 없고 고정된 값만 사용 가능하다
 
-cabinet = {"A-3":"유재석", "B-100":"김태호"}
-print(cabinet["A-3"])
-print((cabinet["B-100"]))
+name = "김종국"
+age = 20
+hobby = "코딩"
+print(name, age, hobby)
 
-# 새 손님
-print(cabinet)
-cabinet["A-3"] = "김종국"
-cabinet["C-20"] = "조세호"
-print(cabinet)
-
-# 간 손님
-del cabinet["A-3"]
-print(cabinet)
-
-# key 들만 출력
-print(cabinet.keys())
-
-# value 들만 출력
-print(cabinet.values())
-
-# key, value 쌍으로 출력
-print(cabinet.items())
-
-# 목욕탕 폐점
-cabinet.clear()
-print(cabinet)
+(name, age, hobby) = ("김종국", 20, "코딩")
+print(name,age,hobby)
