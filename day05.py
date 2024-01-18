@@ -4,16 +4,11 @@ def out_func(nout):
         return nout * nout
     return inner_func
 
+
 x = out_func(9)
 print(type(x))
 print(x)
 print(x())
-
-
-
-
-
-
 
 # inner function
 # def out_func(nout):
