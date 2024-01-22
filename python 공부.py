@@ -1,31 +1,35 @@
-def open_account():
-    print("새로운 계좌를 개설합니다.")
+# score_file = open("score.txt", "w", encoding="utf8") #utf8을 정의해주지 않으면 한글을 썼을 때 좀 이상한 문자로 적힌 경우가 생길 수 있음
+# print("수학 : 0",file=score_file)
+# print("영어 : 50",file=score_file)
+# score_file.close()
+#
+# score_file = open("score.txt", "a",encoding="utf8")
+# score_file.write("과학 : 80")
+# score_file.write("\n코딩 : 100")
+# score_file.close()
 
-open_account()
+# score_file = open("score.txt", "r", encoding="utf8")
+# print(score_file.read())
+# score_file.close()
+#
+# score_file = open("score.txt", "r", encoding="utf8")
+# print(score_file.readline()) # 줄별로 읽기, 한 줄 읽고 커서는 다음 줄로 이동
+# print(score_file.readline(), end="")
+# print(score_file.readline(), end="")
+# print(score_file.readline(), end="")
+# score_file.close()
+#
+# score_file = open("score.txt", "r", encoding="utf8")
+# while True:
+#     line = score_file.readline()
+#     if not line:
+#         break
+#     print(line, end="")
+# score_file.close()
 
-def deposit(balance, money): # 입금
-    print("입금이 완료되었습니다. 잔액은 {0}원입니다.".format(balance+money))
-    return balance + money
+score_file = open("score.txt", "r", encoding="utf8")
+lines = score_file.readlines() # list 형태로 저장
+for line in lines:
+    print(line, end="")
 
-# balance = 0 # 초기 잔액
-# balance = deposit(balance, 1000) # 1,000원 입금
-# print(balance) # 반환값 저장
-
-def withdraw(balance, money): # 출금
-    if balance >= money: # 잔액이 출금보다 많으면
-        print("출금이 완료되었습니다. 잔액은 {0} 원입니다.".format(balance - money))
-        return balance - money
-    else:
-        print("출금이 완료되지 않았습니다. 잔액은 {0} 원입니다.".format(balance))
-        return balance
-
-def withdraw_night(balance, money): #저녁에 출금
-    commission = 100 # 수수료 100원
-    return commission, balance - money - commission
-
-balance = 0 # 초기 잔액
-balance = deposit(balance, 1000) # 1,000원 입금
-# balance = withdraw(balance, 2000)
-# balance = withdraw(balance, 500)
-commission, balance = withdraw_night(balance, 500)
-print("수수료 {0} 원이며, 잔액은 {1} 원입니다.".format(commission, balance))
+score_file.close()
