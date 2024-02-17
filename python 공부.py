@@ -1,19 +1,42 @@
-def calculate_weight(height, gender):
-    if gender == "male":
-        male = True
-    elif gender == "female":
-        male = False
-    else:
-        print("do it again.")
+# # marine, attack unit, soldier. can use a gun
+# name = "marine"
+# hp = 30
+# damage = 5
+#
+# print("{0} unit is produced.".format(name))
+# print("hp is {0}, damage is {1}.\n".format(hp, damage))
+#
+# # tank, attack unit, tank. can fire a cannon.(normal mode / siege mode)
+# tank_name = "tank"
+# tank_hp = 100
+# tank_damage = 30
+#
+# print("{0} unit is produced.".format(tank_name))
+# print("hp is {0}, damage is {1}.\n".format(tank_hp, tank_damage))
+#
+# tank2_name = "tank"
+# tank2_hp = 100
+# tank2_damage = 30
+#
+# print("{0} unit is produced.".format(tank2_name))
+# print("hp is {0}, damage is {1}.\n".format(tank2_hp, tank2_damage))
+#
+# def attack(name, location, damage):
+#     print("{0} : attack {1} direction. [damage {2}]".format\
+#               (name, location, damage))
+#
+# attack(name, "1am", damage)
+# attack(tank_name, "1am", tank_damage)
+# attack(tank2_name, "1am", tank2_damage)
 
-    if male:
-        weight = height * height * 22
-        weight = round(weight, 2)
-        print("average weight of men whose height is " + str(height) + "m is " + str(weight) + "kg.")
-    else:
-        weight = height * height * 21
-        weight = round(weight, 2)
-        print("average weight of women whose height is " +str(height) + "m is " + str(weight) + "kg.")
+class Unit:
+    def __init__(self, name, hp, damage):
+        self.name = name
+        self.hp = hp
+        self.damage = damage
+        print("{0} unit is produced.".format(self.name))
+        print("hp is {0}, damage is {1}\n".format(self.hp, self.damage))
 
-calculate_weight(1.75, "male")
-calculate_weight(1.65, "female")
+marine1 = Unit("marine", 30, 5)
+marine2 = Unit("marine", 30, 5)
+tank = Unit("tank", 100, 30)
