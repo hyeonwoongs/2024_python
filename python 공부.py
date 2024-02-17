@@ -40,3 +40,13 @@ class Unit:
 marine1 = Unit("marine", 30, 5)
 marine2 = Unit("marine", 30, 5)
 tank = Unit("tank", 100, 30)
+
+#wraith : flying unit, flight. clocking (hidden)
+wraith1 = Unit("wraith", 40, 20)
+print("unit name : {0}, damage : {1}".format(wraith1.name, wraith1.damage))
+
+wraith2 = Unit("wraith", 40, 20)
+wraith2.clocking = True
+
+if wraith2.clocking == True:
+    print("{0} is hidden.".format(wraith2.name))
