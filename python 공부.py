@@ -29,24 +29,37 @@
 # attack(tank_name, "1am", tank_damage)
 # attack(tank2_name, "1am", tank2_damage)
 
-class Unit:
-    def __init__(self, name, hp, damage):
-        self.name = name
-        self.hp = hp
-        self.damage = damage
-        print("{0} unit is produced.".format(self.name))
-        print("hp is {0}, damage is {1}\n".format(self.hp, self.damage))
+# class Unit:
+#     def __init__(self, name, hp, damage):
+#         self.name = name
+#         self.hp = hp
+#         self.damage = damage
+#         print("{0} unit is produced.".format(self.name))
+#         print("hp is {0}, damage is {1}\n".format(self.hp, self.damage))
 
-marine1 = Unit("marine", 30, 5)
-marine2 = Unit("marine", 30, 5)
-tank = Unit("tank", 100, 30)
+class AttackUnit:
+    def __init__(self,name, hp, damage):
+            self.name = name
+            self.hp = hp
+            self.damage = damage
 
-#wraith : flying unit, flight. clocking (hidden)
-wraith1 = Unit("wraith", 40, 20)
-print("unit name : {0}, damage : {1}".format(wraith1.name, wraith1.damage))
+    def attack(self, location):
+        print("{0} : attack {1} direction. [damage {2}]\n"\
+              .format(self.name, location, self.damage))
 
-wraith2 = Unit("wraith", 40, 20)
-wraith2.clocking = True
+    def damaged(self, damage):
+        print("{0} is attacked. [damage {1}]".format(self.name, damage))
+        self.hp -= damage
+        print("remain hp of {0} is {1}.\n".format(self.name, self.hp))
+        if self.hp <= 0:
+            print("{0} unit is died.".format(self.name))
 
-if wraith2.clocking == True:
-    print("{0} is hidden.".format(wraith2.name))
+
+fireblamer1 = AttackUnit("fireblamer", 100, 30)
+fireblamer1.attack("1am")
+
+glazepenguine1 = AttackUnit("glazepenguine", 80, 40)
+glazepenguine1.damaged(20)
+glazepenguine1.damaged(20)
+glazepenguine1.damaged(20)
+glazepenguine1.damaged(20)
